@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Khalid </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sparkle & Stars Background -->
+    <div class="sparkle-bg"></div>
+    <div class="stars-layer"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('friendship')">Our Friendship</button>
+        <button onclick="showPage('gallery')">Gallery</button>
+        <button onclick="showPage('wish')">Birthday Wish</button>
+    </nav>
+
+    <!-- Music Controls -->
+    <div class="music-controls">
+        <audio id="bg-music" loop>
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+        <button id="mute-btn" onclick="toggleMusic()"> Play Music</button>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <h1>Happy 21st Birthday, Khalid! </h1>
+        <p><strong>
+            February 4 marks an important milestone. 21 is not just a number — it’s the start of bigger dreams and achievements.
+            May this year bring you clarity, strength, and success in everything you aim for.
+        </strong></p>
+        <div class="separator"></div>
+        <blockquote class="quote">
+            <p class="arabic">"المؤمن مرآة أخيه"</p>
+            <p class="english">"A believer is the mirror of his brother." – Hadith</p>
+        </blockquote>
+        <p><strong>
+            Being your friend has been amazing. Our bond, built through trust and understanding, is something I truly value.
+            May Allah guide you always.
+        </strong></p>
+
+      <div class="emojis">
+    <span onclick="openNote('note1')">&#129309;</span> <!--  -->
+    <span onclick="openNote('note2')">&#127775;</span> <!--  -->
+    <span onclick="openNote('note3')">&#128170;</span> <!--  -->
+    <span onclick="openNote('note4')">&#127873;</span> <!--  -->
+</div>
+
+        <button onclick="showPopup('welcome')">A Meaningful Beginning</button>
+        <button onclick="randomWish()">Surprise Wish </button>
+    </div>
+
+    <!-- Friendship Page -->
+    <div id="friendship" class="page">
+        <h1>Our Friendship </h1>
+        <p><strong>
+            In a world full of temporary connections, our friendship stands on trust and sincerity.
+            From online university discussions to supporting each other when needed, this bond has grown naturally and genuinely.
+        </strong></p>
+        <div class="separator"></div>
+        <blockquote class="quote">
+            <p class="arabic">"الصديق الحقيقي هو الذي ينصحك عند الخطأ"</p>
+            <p class="english">"A true friend is the one who advises you when you are wrong." – Hadith</p>
+        </blockquote>
+        <p><strong>
+            I appreciate the respect, understanding, and honesty that define our friendship.
+            May it always remain pure and filled with goodwill.
+        </strong></p>
+
+        <div class="emojis">
+    <span onclick="openNote('note5')">&#127891;</span> <!--  Learning together -->
+    <span onclick="openNote('note6')">&#128591;</span> <!--  Prayer/Guidance -->
+    <span onclick="openNote('note7')">&#127793;</span> <!--  Growth -->
+    <span onclick="openNote('note8')">&#128101;</span> <!--  Linked in friendship -->
+</div>
+
+        <button onclick="showPopup('friendship')">Our Journey</button>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+        <h1>Moments & Creativity </h1>
+        <p>
+            This gallery reflects creativity, admiration, and moments that represent who you are.
+            Click on any image to view it closely.
+        </p>
+
+        <h2>Sketches</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="khalid_sketch.jpeg" alt="Sketch of Khalid" onclick="openImage('images/sketch-khalid.jpg')">
+                <p>A handmade sketch — created with effort and respect-Khaberdar mazaq banaya to....</p>
+            </div>
+            <div class="gallery-item">
+                <img src="Ronaldo.jpeg" alt="Ronaldo Sketch" onclick="openImage('images/sketch-ronaldo.jpg')">
+                <p>Cristiano Ronaldo — a symbol of dedication.</p>
+            </div>
+        </div>
+
+        <h2>Khalid’s Moments</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="photo.1.jpeg" alt="Khalid Photo 1" onclick="openImage('images/khalid1.jpg')">
+                <p>A confident moment.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="photo.2.jpeg" alt="Khalid Photo 2" onclick="openImage('images/khalid2.jpg')">
+                <p>A memory worth appreciating.</p>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+        <blockquote class="quote">
+            <p class="arabic">"والله في عون العبد ما كان العبد في عون أخيه"</p>
+            <p class="english">"Allah helps a person as long as he helps his brother." – Hadith</p>
+        </blockquote>
+
+        <button onclick="showPopup('gallery')">View Reflections</button>
+    </div>
+
+    <!-- Wish Page -->
+    <div id="wish" class="page">
+        <h1>A Birthday Wish for You </h1>
+        <p><strong>
+            May Allah grant you success, peace, and strength.
+            May your goals become clear, and your efforts rewarded.
+        </strong></p>
+        <div class="separator"></div>
+        <blockquote class="quote">
+            <p class="arabic">"اللهم ارزقنا التوفيق والبركة"</p>
+            <p class="english">"O Allah, grant us success and blessings."</p>
+        </blockquote>
+        <p><strong>
+            Happy Birthday, Khalid. May this year bring growth, health, and countless opportunities.
+        </strong></p>
+
+        <div class="emojis">
+    <span onclick="openNote('note11')">&#127874;</span> <!--  Birthday -->
+    <span onclick="openNote('note12')">&#128591;</span> <!--  Prayers -->
+    <span onclick="openNote('note13')">&#127775;</span> <!--  Sparkle -->
+</div>
+
+        <button onclick="showPopup('wish')">Final Note</button>
+    </div>
+
+    <!-- Modals -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <div id="note-popup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNote()">&times;</span>
+            <h2>A Thoughtful Note</h2>
+            <p id="note-message"></p>
+        </div>
+    </div>
+
+    <div id="image-popup" class="modal">
+        <div class="modal-content image-modal">
+            <span class="close" onclick="closeImage()">&times;</span>
+            <img id="popup-image" src="" alt="Image Preview">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
